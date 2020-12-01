@@ -4,7 +4,7 @@ FROM ubuntu
 RUN apt-get -y update && apt-get install -y wget perl ca-certificates apt-transport-https gnupg curl vim git && update-ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # docker cli
-ENV DOCKERVERSION=18.03.1-ce
+ENV DOCKERVERSION=18.09.9
 RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz \
   && tar xzvf docker-${DOCKERVERSION}.tgz --strip 1 -C /usr/local/bin docker/docker \
   && rm docker-${DOCKERVERSION}.tgz
